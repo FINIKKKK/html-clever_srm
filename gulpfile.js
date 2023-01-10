@@ -108,7 +108,7 @@ const html = () => {
         )
       )
       .pipe(fileinclude())
-      .pipe(webpHtml())
+      // .pipe(webpHtml())
       .pipe(ifPlugin(app.isBuild, htmlmin({ collapseWhitespace: true })))
       .pipe(
         ifPlugin(

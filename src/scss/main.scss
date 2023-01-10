@@ -1,0 +1,96 @@
+// --------- header ----------
+.header {
+  padding-top: 45px;
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    li:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  .item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+// --------- top ----------
+.top {
+  margin: 56px 0;
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content {
+    h1 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 56px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 26px;
+      margin-bottom: 33px;
+      color: $gray;
+    }
+  }
+  .btns {
+    display: flex;
+    align-items: center;
+    a:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .img {
+    width: 600px;
+  }
+}
+
+// --------- reason ----------
+.reason {
+  .title {
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: list;
+  }
+  .item {
+    width: 370px;
+    padding-top: 64px;
+    padding-left: 74px;
+    position: relative;
+    &::before {
+      counter-increment: list;
+      content: counter(list, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+    p {
+      margin-left: 30px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: $gray;
+    }
+  }
+}

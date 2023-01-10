@@ -19,11 +19,13 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: $main;
+  color: #fff;
+  background-color: $bg;
 }
 a {
-  color: $main;
+  color: #fff;
 }
+
 
 // ---- Global-Classes ----
 .container {
@@ -32,18 +34,30 @@ a {
   max-width: 1170px;
 }
 
-.btn {
-  padding: 12px 24px;
+.title {
   font-weight: 700;
-  border-radius: 3px;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 34px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  border: 1px solid transparent;
-  background: #fff;
-  color: #000;
+  border-radius: 15px;
+  background: $purple;
+  color: #fff;
   transition: 0.3s;
+  border: 3px solid $purple;
   &:hover {
     background: #000;
+    color: #fff;
+  }
+  &2 {
+    background-color: transparent;
+    border: 3px solid $green;
     color: #fff;
   }
 }
@@ -53,7 +67,7 @@ a {
   width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: $main;
+  background-color: $green;
 }
 ::-webkit-scrollbar-track {
   background-color: #000;
@@ -61,5 +75,5 @@ a {
 
 // Selection
 ::selection {
-  background: rgba($main, 0.6) !important;
+  background: rgba($green, 0.6) !important;
 }

@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
 html,
 body,
 div,
@@ -534,15 +536,16 @@ body {
   position: relative;
   overflow-x: hidden;
   min-width: 320px;
-  font-family: "Sans Serif";
+  font-family: "Inter";
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #1c1c1c;
+  color: #fff;
+  background-color: #1b0627;
 }
 
 a {
-  color: #1c1c1c;
+  color: #fff;
 }
 
 .container {
@@ -551,22 +554,35 @@ a {
   max-width: 1170px;
 }
 
-.btn {
-  padding: 12px 24px;
+.title {
   font-weight: 700;
-  border-radius: 3px;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 34px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  border: 1px solid transparent;
-  background: #fff;
-  color: #000;
+  border-radius: 15px;
+  background: #7c01c7;
+  color: #fff;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  border: 3px solid #7c01c7;
 }
 
 .btn:hover {
   background: #000;
+  color: #fff;
+}
+
+.btn2 {
+  background-color: transparent;
+  border: 3px solid #4AD687;
   color: #fff;
 }
 
@@ -575,7 +591,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1c1c1c;
+  background-color: #4AD687;
 }
 
 ::-webkit-scrollbar-track {
@@ -583,9 +599,132 @@ a {
 }
 
 ::-moz-selection {
-  background: rgba(28, 28, 28, 0.6) !important;
+  background: rgba(74, 214, 135, 0.6) !important;
 }
 
 ::selection {
-  background: rgba(28, 28, 28, 0.6) !important;
+  background: rgba(74, 214, 135, 0.6) !important;
+}
+
+.header {
+  padding-top: 45px;
+}
+
+.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .list li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header .item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.top {
+  margin: 56px 0;
+}
+
+.top .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top .content h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.top .content p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 33px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.top .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .btns a:not(:last-child) {
+  margin-right: 30px;
+}
+
+.top .img {
+  width: 600px;
+}
+
+.reason .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  counter-reset: list;
+}
+
+.reason .item {
+  width: 370px;
+  padding-top: 64px;
+  padding-left: 74px;
+  position: relative;
+}
+
+.reason .item::before {
+  counter-increment: list;
+  content: counter(list, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.reason .item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.reason .item p {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7);
 }
