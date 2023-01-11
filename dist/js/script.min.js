@@ -4,27 +4,56 @@ form.addEventListener("submit", function (event) {
 
   const name = document.querySelector("#form__name").value;
   const email = document.querySelector("#form__email").value;
+  const phone = document.querySelector("#form__phone").value;
+  const company = document.querySelector("#form__company").value;
 
   const errorElements = document.querySelectorAll(".span__error");
   for (let i = 0; i < errorElements.length; i++) {
     errorElements[i].remove();
   }
-  const inputElements = document.querySelectorAll(".input");
+  const inputElements = document.querySelectorAll(".input input");
   for (let i = 0; i < inputElements.length; i++) {
-    inputElements[i].classList.remove("error");
+    inputElements[i].parentNode.classList.remove("error");
   }
 
   if (name.length < 1) {
     const nameInput = document.querySelector("#form__name");
-    nameInput.classList.add("error");
+    nameInput.parentNode.classList.add("error");
     nameInput.insertAdjacentHTML(
       "afterend",
       '<span class="span__error">Заполните поле</span>'
     );
   }
+  if (company.length < 1) {
+    const companyInput = document.querySelector("#form__company");
+    companyInput.parentNode.classList.add("error");
+    companyInput.insertAdjacentHTML(
+      "afterend",
+      '<span class="span__error">Заполните поле</span>'
+    );
+  }
+  if (phone.length < 1) {
+    const phoneInput = document.querySelector("#form__phone");
+    phoneInput.parentNode.classList.add("error");
+    phoneInput.insertAdjacentHTML(
+      "afterend",
+      '<span class="span__error">Заполните поле</span>'
+    );
+  } else {
+    const regEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    const phoneEmail = regEx.test(phone);
+    if (!phoneEmail) {
+      const phoneInput = document.querySelector("#form__phone");
+      phoneInput.parentNode.classList.add("error");
+      phoneInput.insertAdjacentHTML(
+        "afterend",
+        '<span class="span__error">Заполните правильно</span>'
+      );
+    }
+  }
   if (email.length < 1) {
     const emailInput = document.querySelector("#form__email");
-    emailInput.classList.add("error");
+    emailInput.parentNode.classList.add("error");
     emailInput.insertAdjacentHTML(
       "afterend",
       '<span class="span__error">Заполните поле</span>'
@@ -35,7 +64,7 @@ form.addEventListener("submit", function (event) {
     const validEmail = regEx.test(email);
     if (!validEmail) {
       const emailInput = document.querySelector("#form__email");
-      emailInput.classList.add("error");
+      emailInput.parentNode.classList.add("error");
       emailInput.insertAdjacentHTML(
         "afterend",
         '<span class="span__error">Заполните правильно</span>'

@@ -11,7 +11,7 @@
 
     <!-- top
     ======================================================= -->
-    <section class="top">
+    <section class="top" id="top">
         <div class="container">
             <div class="inner">
                 <div class="content">
@@ -20,8 +20,10 @@
                     <p>Наша цель – сделать ваш бизнес эффективным и прибыльным,
                         ДЕЛАЕМ СЛОЖНОЕ - ПРОСТЫМ И ПОНЯТНЫМ.</p>
                     <div class="btns">
-                        <a href="#" class="btn">Подать заявку</a>
-                        <a href="" class="btn btn2">Подробнее</a>
+                        <div class="btn__wrapper">
+                            <a href="#contacts" class="btn">Подать заявку</a>
+                        </div>
+                        <!-- <a href="" class="btn btn2">Подробнее</a> -->
                     </div>
                 </div>
 
@@ -38,7 +40,7 @@
 
     <!-- reason
     ======================================================= -->
-    <section class="reason">
+    <section class="reason" id="benefits">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Зачем вам CRM-система ?</h2>
@@ -126,18 +128,22 @@
     </section>
     <!-- match end -->
 
+
     @@include('./blocks/marquee.html')
+
 
     <!-- about
     ======================================================= -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="inner">
                 <div class="content">
                     <h2 class="title">О нас</h2>
                     <h3 class="pretitle">Clever CRM – это команда опытных бизнес-консультантов и интеграторов.</h3>
                     <p class="text">Мы занимаемся внедрением CRM и настройкой IP-телефонии. Проводим аудит отдела продаж, выявляем основные процессы компании и составляем схему работы в CRM. На основании схемы делаем все необходимые настройки CRM, обучаем сотрудников и внедряем систему в компанию. Мы помогаем бизнесу внедрять технологии и систематизацию в продажи, выстраивать эффективный процесс коммуникации с клиентами для улучшения качества работы и конверсии продаж. Оставь заявку, и мы покажем на деле, что правильно настроенная CRM-система – это просто!</p>
-                    <a href="#" class="btn">Подать заявку</a>
+                    <div class="btn__wrapper">
+                        <a href="#contacts" class="btn">Подать заявку</a>
+                    </div>
                 </div>
                 <div class="patterns">
                     <svg class="pattern" width="384" height="388" viewBox="0 0 384 388" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +279,7 @@
 
     <!-- portfolio
     ======================================================= -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Порфолио</h2>
@@ -306,12 +312,12 @@
 
     <!-- form
    ======================================================= -->
-    <section class="form">
+    <section class="form" id="contacts">
         <div class="container">
             <div class="inner">
                 <form id="form">
                     <h2 class="title">Получите консультацию</h2>
-                    <div class="input error">
+                    <div class="input">
                         <input type="text" id="form__name" name="form__name" placeholder="Имя:">
                     </div>
                     <div class="input">
@@ -323,7 +329,9 @@
                     <div class="input">
                         <input type="text" id="form__company" name="form__company" placeholder="Компания:">
                     </div>
-                    <button type="submit" id="form__btn" class="btn btn2">Подать заявку</button>
+                    <div class="btn__wrapper">
+                        <button type="submit" id="form__btn" class="btn btn2">Подать заявку</button>
+                    </div>
                 </form>
                 <img class="img" src="./img/form__img.png" alt="">
             </div>

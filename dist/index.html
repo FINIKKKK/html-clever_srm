@@ -21,29 +21,31 @@
 
     <!-- header
 ======================================================= -->
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <nav class="menu">
-            <a href='index.html' class='logo'>
+            <a href='#header' class='logo'>
                 <img src='./img/logo.png' alt='logo' />
             </a>
 
             <ul class="list">
                 <li class="item">
-                    <a href="#">Преимущества</a>
+                    <a href="#benefits">Преимущества</a>
                 </li>
                 <li class="item">
-                    <a href="#">О нас</a>
+                    <a href="#about">О нас</a>
                 </li>
                 <li class="item">
-                    <a href="#">Портфолио</a>
+                    <a href="#portfolio">Портфолио</a>
                 </li>
                 <li class="item">
-                    <a href="#">Контакты</a>
+                    <a href="#footer">Контакты</a>
                 </li>
             </ul>
-
-            <a href="#" class="btn">Консультация</a>
+            
+            <div class="btn__wrapper">
+                <a href="#contacts" class="btn">Консультация</a>
+            </div>
         </nav>
     </div>
 </header>
@@ -51,7 +53,7 @@
 
     <!-- top
     ======================================================= -->
-    <section class="top">
+    <section class="top" id="top">
         <div class="container">
             <div class="inner">
                 <div class="content">
@@ -60,8 +62,10 @@
                     <p>Наша цель – сделать ваш бизнес эффективным и прибыльным,
                         ДЕЛАЕМ СЛОЖНОЕ - ПРОСТЫМ И ПОНЯТНЫМ.</p>
                     <div class="btns">
-                        <a href="#" class="btn">Подать заявку</a>
-                        <a href="" class="btn btn2">Подробнее</a>
+                        <div class="btn__wrapper">
+                            <a href="#contacts" class="btn">Подать заявку</a>
+                        </div>
+                        <!-- <a href="" class="btn btn2">Подробнее</a> -->
                     </div>
                 </div>
 
@@ -84,7 +88,7 @@
 
     <!-- reason
     ======================================================= -->
-    <section class="reason">
+    <section class="reason" id="benefits">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Зачем вам CRM-система ?</h2>
@@ -172,6 +176,7 @@
     </section>
     <!-- match end -->
 
+
     <!-- marquee -->
 <div class="marquee">
   <div class="inner">
@@ -180,16 +185,19 @@
   </div>
 </div>
 
+
     <!-- about
     ======================================================= -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="inner">
                 <div class="content">
                     <h2 class="title">О нас</h2>
                     <h3 class="pretitle">Clever CRM – это команда опытных бизнес-консультантов и интеграторов.</h3>
                     <p class="text">Мы занимаемся внедрением CRM и настройкой IP-телефонии. Проводим аудит отдела продаж, выявляем основные процессы компании и составляем схему работы в CRM. На основании схемы делаем все необходимые настройки CRM, обучаем сотрудников и внедряем систему в компанию. Мы помогаем бизнесу внедрять технологии и систематизацию в продажи, выстраивать эффективный процесс коммуникации с клиентами для улучшения качества работы и конверсии продаж. Оставь заявку, и мы покажем на деле, что правильно настроенная CRM-система – это просто!</p>
-                    <a href="#" class="btn">Подать заявку</a>
+                    <div class="btn__wrapper">
+                        <a href="#contacts" class="btn">Подать заявку</a>
+                    </div>
                 </div>
                 <div class="patterns">
                     <svg class="pattern" width="384" height="388" viewBox="0 0 384 388" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -325,7 +333,7 @@
 
     <!-- portfolio
     ======================================================= -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Порфолио</h2>
@@ -364,12 +372,12 @@
 
     <!-- form
    ======================================================= -->
-    <section class="form">
+    <section class="form" id="contacts">
         <div class="container">
             <div class="inner">
                 <form id="form">
                     <h2 class="title">Получите консультацию</h2>
-                    <div class="input error">
+                    <div class="input">
                         <input type="text" id="form__name" name="form__name" placeholder="Имя:">
                     </div>
                     <div class="input">
@@ -381,7 +389,9 @@
                     <div class="input">
                         <input type="text" id="form__company" name="form__company" placeholder="Компания:">
                     </div>
-                    <button type="submit" id="form__btn" class="btn btn2">Подать заявку</button>
+                    <div class="btn__wrapper">
+                        <button type="submit" id="form__btn" class="btn btn2">Подать заявку</button>
+                    </div>
                 </form>
                 <img class="img" src="./img/form__img.png" alt="">
             </div>
@@ -392,14 +402,71 @@
 
     <!-- footer
 ======================================================= -->
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container">
-        <div class="footer__inner">
-
+        <div class="inner">
+            <a href='#header' class='logo'>
+                <img src='./img/logo.png' alt='logo'>
+            </a>
+            <div class="block">
+                <h5 class="block__title">Контакты:</h5>
+                <ul class="list">
+                    <li>Тел: +7 (707) 700-21-13</li>
+                    <li>Адрес: ул.Дощанова 182а</li>
+                    <li>Email: clever@clever.kz</li>
+                </ul>
+            </div>
+            <div class="block">
+                <h5 class="block__title">Режим работы:</h5>
+                <ul class="list">
+                    <li>ПН - ПТ 9:00 - 4:00</li>
+                    <li>СБ - ВС Выходные</li>
+                </ul>
+            </div>
+            <ul class="soclist">
+                <li class="item">
+                    <a href="#">
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/icons/icons.svg#instagram" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/icons/icons.svg#telegram" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <svg width="20" height="20">
+                            <use xlink:href="./img/icons/icons.svg#youtube" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__up">
+            <a href="#header" class="arrow">
+                <svg width="20" height="20">
+                    <use xlink:href="./img/icons/icons.svg#arrow" />
+                </svg>
+            </a>
         </div>
     </div>
 </footer>
 <!-- footer End -->
+
+<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+    </defs>
+</svg>
 
 
     <!-- Scripts -->

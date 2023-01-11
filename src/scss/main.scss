@@ -84,6 +84,7 @@
 
 // --------- reason ----------
 .reason {
+  padding-top: 70px;
   margin-bottom: 200px;
   .title {
     margin-bottom: 100px;
@@ -126,6 +127,13 @@
     }
     &:nth-child(3n + 2) {
       margin-top: 150px;
+    }
+    &:nth-child(4),
+    &:nth-child(6) {
+      &::after {
+        transform: translate(-50%, -55%) scale(0.7);
+        top: 30%;
+      }
     }
     h3 {
       font-weight: 700;
@@ -178,6 +186,7 @@
 
 // --------- about ----------
 .about {
+  padding-top: 70px;
   .inner {
     position: relative;
     margin-bottom: 180px;
@@ -304,7 +313,8 @@
 
 // --------- form ----------
 .form {
-  margin-bottom: 120px;
+  margin-bottom: 0px;
+  padding-top: 70px;
   .inner {
     display: flex;
     align-items: center;
@@ -323,10 +333,13 @@
   }
   .input {
     margin-bottom: 20px;
-    input {
-      &.error {
+    &.error {
+      input {
+        &:focus {
+          border-color: rgb(124, 24, 24);
+        }
         background: linear-gradient($purple2 0 0) padding-box,
-          linear-gradient(135.83deg, transparent 22.24%, red 85.59%) border-box;
+          linear-gradient(135.83deg, transparent 22.24%, rgb(124, 24, 24) 85.59%) border-box;
       }
     }
     input {
@@ -346,10 +359,18 @@
       &::placeholder {
         color: $gray;
       }
+      &:focus {
+        border-color: $purple;
+      }
     }
     &:hover {
       input {
-        background-position-x: 352.5px;
+        border-color: $purple;
+      }
+      &.error {
+        input {
+          border-color: rgb(124, 24, 24);
+        }
       }
     }
     span {
@@ -363,9 +384,11 @@
     input {
       background: linear-gradient($purple2 0 0) padding-box,
         linear-gradient(-135.83deg, transparent 22.24%, #7c01c7 85.59%) border-box;
-      &.error {
+    }
+    &.error {
+      input {
         background: linear-gradient($purple2 0 0) padding-box,
-          linear-gradient(-135.83deg, transparent 22.24%, red 85.59%) border-box;
+          linear-gradient(-135.83deg, transparent 22.24%, rgb(124, 24, 24) 85.59%) border-box;
       }
     }
     span {
@@ -373,7 +396,6 @@
     }
     &:hover {
       input {
-        background-position-x: -352.5px;
       }
     }
   }
@@ -389,7 +411,8 @@
 
 // --------- marquee ----------
 .marquee {
-  margin: 100px 0;
+  margin-top: 100px;
+  margin-bottom: 70px;
   margin-right: 15px;
   font-family: $font;
   font-style: normal;
@@ -434,6 +457,7 @@
     width: 200%;
     animation: animate 40s linear infinite;
     animation-delay: -40s;
+    padding-right: 20px;
   }
   .text:nth-child(2) {
     width: 200%;
@@ -468,4 +492,137 @@
       transform: translateX(-200%);
     }
   }
+}
+
+// --------- footer ----------
+.footer {
+  background-color: $purple2;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  margin-top: 120px;
+  .inner {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 65px;
+  }
+  .logo {
+    width: 180px;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .block__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .block .list {
+    li {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      color: $gray;
+    }
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .soclist {
+    display: flex;
+    align-items: center;
+    .item:not(:last-child) {
+      margin-right: 15px;
+    }
+    .item {
+      background-color: $green;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+      svg {
+        margin-top: 5px;
+        margin-left: 2px;
+        width: 80%;
+        height: auto;
+        fill: #fff;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .footer__up {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      height: 2px;
+      width: 40%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+    .arrow {
+      width: 35px;
+      height: 35px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(#fff, 0.3);
+        animation: anim 2.5s infinite;
+        z-index: 0;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+      svg {
+        fill: $purple2;
+        width: 70%;
+        z-index: 10;
+      }
+    }
+    @keyframes anim {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2.5);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// --------- portfolio ----------
+.portfolio {
+  padding-top: 70px;
 }

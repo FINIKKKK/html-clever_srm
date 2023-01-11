@@ -2,6 +2,7 @@
 html {
   overflow-x: hidden;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   &.fixed {
     overflow-y: hidden;
   }
@@ -26,7 +27,6 @@ a {
   color: #fff;
 }
 
-
 // ---- Global-Classes ----
 .container {
   margin: 0 auto;
@@ -41,6 +41,11 @@ a {
   text-align: center;
 }
 
+.btn__wrapper {
+  padding: 15px 0;
+  filter: url('#goo');
+}
+
 .btn {
   padding: 12px 34px;
   font-weight: 700;
@@ -51,14 +56,36 @@ a {
   color: #fff;
   transition: 0.3s;
   border: 3px solid $purple;
-  &:hover {
-    background: #000;
-    color: #fff;
+  & {
+    display: inline-block;
+    text-align: center;
+    background: $purple;
+    position: relative;
   }
-  &2 {
-    background-color: transparent;
-    border: 3px solid $green;
-    color: #fff;
+  &:before,
+  &:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: '';
+    display: inline-block;
+    background: $purple;
+    border-radius: 50%;
+    transition: transform 0.65s ease;
+    transform: scale(0);
+    z-index: -1;
+  }
+  &:before {
+    top: -25%;
+    left: 20%;
+  }
+  &:after {
+    bottom: -25%;
+    right: 20%;
+  }
+  &:hover:before,
+  &:hover:after {
+    transform: none;
   }
 }
 
@@ -71,7 +98,7 @@ a {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-track {
-  background-color: $bg;
+  background-color: $purple2;
 }
 
 // Selection
