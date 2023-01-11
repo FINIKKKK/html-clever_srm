@@ -625,4 +625,89 @@
 // --------- portfolio ----------
 .portfolio {
   padding-top: 70px;
+  position: relative;
+  padding-bottom: 70px;
+  .inner {
+    position: relative;
+    padding-bottom: 65px;
+  }
+  .title {
+    margin-bottom: 60px;
+  }
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    height: 320px;
+  }
+  .swiper-slide {
+    overflow: hidden;
+    background-color: $purple2;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: 0.3s;
+    a {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &.swiper-slide-active {
+      height: 320px;
+      background-color: $purple;
+    }
+  }
+  .prev,
+  .next {
+    z-index: 30;
+    position: absolute;
+    top: 47%;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $purple;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    svg {
+      fill: $bg;
+      width: 50%;
+      height: 50%;
+    }
+  }
+  .prev {
+    left: 65px;
+  }
+  .next {
+    right: 65px;
+  }
+  .pagination {
+    position: absolute;
+    left: 41%;
+    bottom: 0px;
+    span {
+      width: 35px;
+      height: 5px;
+      border-radius: 3px;
+      opacity: 1;
+      background-color: $purple2;
+      transition: 0.2s;
+      &.swiper-pagination-bullet-active {
+        background-color: $purple;
+        pointer-events: none;
+      }
+      &:hover {
+        background-color: rgba($purple, 0.5);
+      }
+    }
+  }
 }

@@ -1,5 +1,7 @@
-const form = document.querySelector("#form");
-form.addEventListener("submit", function (event) {
+@@include('../../node_modules/swiper/swiper-bundle.min.js');
+
+// --- Валидация формы
+document.querySelector("#form").addEventListener("submit", function (event) {
   event.preventDefault();
 
   const name = document.querySelector("#form__name").value;
@@ -72,3 +74,24 @@ form.addEventListener("submit", function (event) {
     }
   }
 });
+
+// --- Slider
+const swiper_places = new Swiper('.slider', {
+  slidesPerView: 2,
+  loop: true,
+  spaceBetween: 30,
+  centeredSlides: true,
+  navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+  },
+  pagination: {
+      el: ".pagination",
+      clickable: true,
+  },
+  // autoplay: {
+  //     delay: 8000,
+  //     disableOnInteraction: true,
+  // },
+});
+

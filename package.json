@@ -5,9 +5,13 @@
   "main": "gulpfile.js",
   "type": "module",
   "dependencies": {
+    "baguettebox.js": "^1.11.1",
     "jquery": "^3.6.0",
+    "lightgallery": "^2.7.1",
+    "magnific-popup": "^1.1.0",
     "node-gyp": "^9.1.0",
-    "node-sass": "^8.0.0"
+    "node-sass": "^8.0.0",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",

@@ -1,3 +1,5 @@
+@import url(../../node_modules/swiper/swiper-bundle.min.css);
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -1493,4 +1495,126 @@ a {
 
 .portfolio {
   padding-top: 70px;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.portfolio .inner {
+  position: relative;
+  padding-bottom: 65px;
+}
+
+.portfolio .title {
+  margin-bottom: 60px;
+}
+
+.portfolio .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 320px;
+}
+
+.portfolio .swiper-slide {
+  overflow: hidden;
+  background-color: #33054F;
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio .swiper-slide a {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .swiper-slide.swiper-slide-active {
+  height: 320px;
+  background-color: #7c01c7;
+}
+
+.portfolio .prev,
+.portfolio .next {
+  z-index: 30;
+  position: absolute;
+  top: 47%;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #7c01c7;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.portfolio .prev:hover,
+.portfolio .next:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.portfolio .prev svg,
+.portfolio .next svg {
+  fill: #1b0627;
+  width: 50%;
+  height: 50%;
+}
+
+.portfolio .prev {
+  left: 65px;
+}
+
+.portfolio .next {
+  right: 65px;
+}
+
+.portfolio .pagination {
+  position: absolute;
+  left: 41%;
+  bottom: 0px;
+}
+
+.portfolio .pagination span {
+  width: 35px;
+  height: 5px;
+  border-radius: 3px;
+  opacity: 1;
+  background-color: #33054F;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.portfolio .pagination span.swiper-pagination-bullet-active {
+  background-color: #7c01c7;
+  pointer-events: none;
+}
+
+.portfolio .pagination span:hover {
+  background-color: rgba(124, 1, 199, 0.5);
 }
