@@ -195,6 +195,7 @@
     padding: 50px;
   }
   .content {
+    position: relative;
     z-index: 10;
     text-align: center;
     width: 80%;
@@ -219,8 +220,8 @@
   .btn {
   }
   .patterns {
-    z-index: 0;
     .pattern {
+      z-index: 0;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
