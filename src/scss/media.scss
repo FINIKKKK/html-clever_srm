@@ -31,6 +31,9 @@
 
 //Max-Width: 950px ================================
 @media (max-width: 950px) {
+  .header .list li:not(:last-child) {
+    margin-right: 15px;
+  }
   .form {
     .inner {
       padding: 40px 40px;
@@ -55,6 +58,28 @@
 
 //Max-Width: 850px ================================
 @media (max-width: 850px) {
+  .work {
+    .item {
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .item::after {
+      font-size: 20px;
+      line-height: 24px;
+      left: 7px;
+    }
+    .item::before {
+      transform: scale(0.6);
+      left: 20px;
+    }
+  }
   .form {
     .inner {
       padding: 40px 35px;
@@ -93,10 +118,48 @@
 //Планшет #########################################
 //Max-Width: 800px ================================
 @media (max-width: 800px) {
+  .portfolio {
+    .pagination {
+      left: 35%;
+    }
+    .next,
+    .prev {
+      top: 50%;
+    }
+    .next {
+      right: 25px;
+    }
+    .prev {
+      left: 25px;
+    }
+    .inner {
+      padding-bottom: 25px;
+    }
+    .title {
+      margin-bottom: 25px;
+    }
+    .swiper {
+      height: 250px;
+    }
+    .swiper-slide {
+      height: 250px;
+      &.swiper-slide-active {
+        height: 250px;
+      }
+    }
+  }
 }
 
 //Max-Width: 750px ================================
 @media (max-width: 750px) {
+  .work {
+    .inner {
+    }
+    .item__wrapper {
+      flex: 0 0 50%;
+      margin-bottom: 35px;
+    }
+  }
   .footer {
     .inner {
       display: grid;
@@ -188,6 +251,16 @@
 
 //Max-Width: 550px ================================
 @media (max-width: 550px) {
+  .header {
+    .wrapper .list li {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .wrapper .btn__wrapper .btn {
+      font-size: 18px;
+      padding: 20px 45px;
+    }
+  }
   .footer {
     padding-top: 35px;
     .inner {
@@ -262,10 +335,52 @@
 
 //Max-Width: 500px ================================
 @media (max-width: 500px) {
+  .portfolio {
+    .pagination {
+      left: 50%;
+      transform: translateX(-20%);
+    }
+  }
+  .work {
+    .title {
+      margin-bottom: 30px;
+    }
+    .item::after {
+      font-size: 18px;
+      line-height: 24px;
+      left: 5px;
+    }
+    .item {
+      padding-left: 40px;
+    }
+    .item::before {
+      left: 12px;
+    }
+    .item p::after {
+      left: -12px;
+    }
+    .item h3 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .list {
+      margin: 0 -10px;
+    }
+    .item__wrapper {
+      flex: 0 0 50%;
+      padding: 0 10px;
+      margin-bottom: 35px;
+    }
+  }
 }
 
 //Max-Width: 450px ================================
 @media (max-width: 450px) {
+  .header {
+    .logo {
+      width: 170px;
+    }
+  }
   .footer {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -319,6 +434,32 @@
 
 //Max-Width: 400px ================================
 @media (max-width: 400px) {
+  .portfolio {
+    .pagination {
+      left: 50%;
+      transform: translateX(-32%);
+    }
+  }
+  .work {
+    .list {
+      margin: 0;
+    }
+    .item__wrapper {
+      padding: 0;
+    }
+    .item::after {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .item h3 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+    .item p {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
   .about {
     .inner {
       padding: 30px 15px;
