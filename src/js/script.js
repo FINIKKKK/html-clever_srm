@@ -111,10 +111,10 @@ const swiper_places = new Swiper(".slider", {
     el: ".pagination",
     clickable: true,
   },
-  // autoplay: {
-  //     delay: 8000,
-  //     disableOnInteraction: true,
-  // },
+  autoplay: {
+      delay: 8000,
+      disableOnInteraction: true,
+  },
   breakpoints: {
     // when window width is >= 320px
     0: {
