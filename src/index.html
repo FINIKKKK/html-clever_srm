@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('./blocks/main/head.html', {
-"title": "CleverCRM",
-})
+@@include('./blocks/main/head.html')
 
 <body>
 
@@ -26,7 +24,7 @@
                     </div>
                 </div>
                 <div class="img">
-                    <img src="./img/top__img.png" alt="ПОЛНАЯ АВТОМАТИЗАЦИЯ" />
+                    <img src="./img/top__img.png" alt="top__img" width="427" height="427" loading="lazy">
                     <svg class="pattern1" width="384" height="388" viewBox="0 0 384 388" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M90.679 285.119C86.5135 284.866 82.5973 287.301 81.9319 290.556C81.2665 293.811 84.1037 296.654 88.2692 296.907C92.4347 297.159 96.351 294.724 97.0164 291.469C97.6819 288.214 94.8445 285.371 90.679 285.119Z" fill="#4AD688" />
                         <path d="M91.5378 280.918C84.4041 280.486 77.6973 284.655 76.5577 290.229C75.4181 295.804 80.2772 300.674 87.4109 301.106C94.5446 301.537 101.251 297.369 102.391 291.794C103.531 286.219 98.6715 281.35 91.5378 280.918Z" stroke="#4AD688" stroke-miterlimit="10" />
@@ -149,7 +147,7 @@
 
     <!-- match
     ======================================================= -->
-    <section class="match">
+    <section class="match" id="match">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Подходит для любой сферы</h2>
@@ -251,7 +249,7 @@
 
     <!-- work
     ======================================================= -->
-    <section class="work">
+    <section class="work" id="work">
         <div class="container">
             <div class="inner">
                 <h2 class="title">Как мы работаем ?</h2>
@@ -357,22 +355,30 @@
                 <div class="slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a class="video-youtube" href="https://www.youtube.com/watch?v=6WJ13zrscxs" data-lightbox="youtube">
-                                <!-- <img src="https://i.ytimg.com/vi/6WJ13zrscxs/hqdefault.jpg" /> -->
-                                <img src="./img/portfolio__img1.jpg" alt="">
+                            <a class="video-youtube" href="https://www.youtube.com/watch?v=6WJ13zrscxs">
+                                <img src="https://i.ytimg.com/vi/6WJ13zrscxs/hqdefault.jpg" alt="slider__img" width="555" height="320" loading="lazy">
+                                <!-- <img src="./img/portfolio__img1.jpg" alt="slider__img" width="555" height="320" loading="lazy"> -->
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/portfolio__img1.jpg" alt="">
+                            <a class="video-youtube" href="https://www.youtube.com/watch?v=6WJ13zrscxs">
+                                <img src="https://i.ytimg.com/vi/6WJ13zrscxs/hqdefault.jpg" alt="slider__img" width="555" height="320" loading="lazy">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/portfolio__img1.jpg" alt="">
+                            <a class="video-youtube" href="https://www.youtube.com/watch?v=6WJ13zrscxs">
+                                <img src="https://i.ytimg.com/vi/6WJ13zrscxs/hqdefault.jpg" alt="slider__img" width="555" height="320" loading="lazy">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/portfolio__img1.jpg" alt="">
+                            <a class="video-youtube" href="https://www.youtube.com/watch?v=6WJ13zrscxs">
+                                <img src="https://i.ytimg.com/vi/6WJ13zrscxs/hqdefault.jpg" alt="slider__img" width="555" height="320" loading="lazy">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/portfolio__img1.jpg" alt="">
+                            <a class="video-youtube" href="https://www.youtube.com/watch?v=6WJ13zrscxs">
+                                <img src="https://i.ytimg.com/vi/6WJ13zrscxs/hqdefault.jpg" alt="slider__img" width="555" height="320" loading="lazy">
+                            </a>
                         </div>
                     </div>
 
@@ -393,6 +399,7 @@
         </div>
     </section>
     <!-- portfolio end -->
+
 
 
     @@include('./blocks/marquee.html')
@@ -422,7 +429,7 @@
                     </div>
                 </form>
                 <div class="img">
-                    <img src="./img/form__img.png" alt="">
+                    <img src="./img/form__img.png" alt="form__img" width="416" height="324" loading="lazy">
                     <svg class="pattern1" width="384" height="388" viewBox="0 0 384 388" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M90.679 285.119C86.5135 284.866 82.5973 287.301 81.9319 290.556C81.2665 293.811 84.1037 296.654 88.2692 296.907C92.4347 297.159 96.351 294.724 97.0164 291.469C97.6819 288.214 94.8445 285.371 90.679 285.119Z" fill="#4AD688" />
                         <path d="M91.5378 280.918C84.4041 280.486 77.6973 284.655 76.5577 290.229C75.4181 295.804 80.2772 300.674 87.4109 301.106C94.5446 301.537 101.251 297.369 102.391 291.794C103.531 286.219 98.6715 281.35 91.5378 280.918Z" stroke="#4AD688" stroke-miterlimit="10" />

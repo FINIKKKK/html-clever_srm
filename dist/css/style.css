@@ -1,11 +1,11 @@
 @import url(../../node_modules/swiper/swiper-bundle.min.css);
 
+@import url(../../node_modules/magnific-popup/dist/magnific-popup.css);
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
 */
-
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
 html,
 body,
@@ -1104,7 +1104,7 @@ a {
 }
 
 .work {
-  margin-bottom: 180px;
+  margin-bottom: 70px;
 }
 
 .work .title {
@@ -1501,7 +1501,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 65px;
 }
 
 .footer .logo {
@@ -1808,6 +1807,20 @@ a {
 
 .portfolio .pagination span:hover {
   background-color: rgba(124, 1, 199, 0.5);
+}
+
+@media (min-width: 1600px) {
+  .portfolio .container {
+    overflow: hidden;
+  }
+
+  .portfolio .swiper-slide {
+    height: 250px;
+  }
+
+  .portfolio .swiper-slide.swiper-slide-active {
+    height: 280px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -2513,7 +2526,6 @@ a {
         grid-template-areas: 'box-1 box-4' 'box-3 box-2';
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 40px;
   }
 
   .footer .logo {
@@ -2757,6 +2769,20 @@ a {
 }
 
 @media (max-width: 400px) {
+  .header {
+    margin-bottom: 45px;
+  }
+
+  .header .wrapper .list li {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .header .wrapper .btn__wrapper .btn {
+    font-size: 16px;
+    padding: 14px 45px;
+  }
+
   .marquee {
     font-size: 14px;
     line-height: 22px;
@@ -2771,59 +2797,21 @@ a {
     height: 35px;
   }
 
-  .marquee .marquee .text {
-    width: 200%;
+  .marquee .text {
+    width: auto;
+    -webkit-animation: animate 40s linear infinite;
+            animation: animate 40s linear infinite;
     -webkit-animation-delay: -40s;
             animation-delay: -40s;
   }
 
-@-webkit-keyframes animate {
-    0% {
-      -webkit-transform: translateX(100%);
-              transform: translateX(100%);
-    }
-
-    100% {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-}
-
-@keyframes animate {
-    0% {
-      -webkit-transform: translateX(100%);
-              transform: translateX(100%);
-    }
-
-    100% {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-}
-
-@-webkit-keyframes animate2 {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-
-    100% {
-      -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-    }
-}
-
-@keyframes animate2 {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-
-    100% {
-      -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-    }
-}
+  .marquee .text:nth-child(2) {
+    width: auto;
+    -webkit-animation: animate2 40s linear infinite;
+            animation: animate2 40s linear infinite;
+    -webkit-animation-delay: -20s;
+            animation-delay: -20s;
+  }
 
   .top .img {
     width: 300px;

@@ -1,5 +1,16 @@
 //Max-Width: 1279px ================================
-@media (max-width: 1279px) {
+@media (min-width: 1600px) {
+  .portfolio {
+    .container {
+      overflow: hidden;
+    }
+    .swiper-slide {
+      height: 250px;
+      &.swiper-slide-active {
+        height: 280px;
+      }
+    }
+  }
 }
 
 //Max-Width: 1200px ================================
@@ -452,7 +463,6 @@
         'box-1 box-4'
         'box-3 box-2';
       grid-template-columns: 1fr 1fr;
-      margin-bottom: 40px;
     }
     .logo {
       margin-bottom: 0;
@@ -639,6 +649,17 @@
 
 //Max-Width: 400px ================================
 @media (max-width: 400px) {
+  .header {
+    margin-bottom: 45px;
+    .wrapper .list li {
+      font-size: 22px;
+      line-height: 25px;
+    }
+    .wrapper .btn__wrapper .btn {
+      font-size: 16px;
+      padding: 14px 45px;
+    }
+  }
   .marquee {
     font-size: 14px;
     line-height: 22px;
@@ -649,27 +670,15 @@
     &::before {
       height: 35px;
     }
-    .marquee {
-      .text {
-        width: 200%;
-        animation-delay: -40s;
-      }
+    .text {
+      width: auto;
+      animation: animate 40s linear infinite;
+      animation-delay: -40s;
     }
-    @keyframes animate {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-    @keyframes animate2 {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-200%);
-      }
+    .text:nth-child(2) {
+      width: auto;
+      animation: animate2 40s linear infinite;
+      animation-delay: -20s;
     }
   }
   .top {

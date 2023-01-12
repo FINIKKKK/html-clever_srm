@@ -6,6 +6,7 @@
   "type": "module",
   "dependencies": {
     "baguettebox.js": "^1.11.1",
+    "fslightbox": "^3.3.2-2",
     "jquery": "^3.6.0",
     "lightgallery": "^2.7.1",
     "magnific-popup": "^1.1.0",

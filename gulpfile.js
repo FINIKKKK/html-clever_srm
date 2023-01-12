@@ -147,12 +147,12 @@ const scss = () => {
         })
       )
       .pipe(groupCssMediaQueries())
-      .pipe(webpcss(
-          {
-              webpClass: ".webp",
-              noWebpClass: ".no-webp",
-          }
-      ))
+      // .pipe(webpcss(
+      //     {
+      //         webpClass: ".webp",
+      //         noWebpClass: ".no-webp",
+      //     }
+      // ))
       .pipe(
         autoprefixer({
           grid: true,
@@ -202,10 +202,10 @@ const img = () => {
         )
       )
       .pipe(newer(path.build.img))
-      .pipe(webp())
-      .pipe(gulp.dest(path.build.img))
-      .pipe(gulp.src(path.src.img))
-      .pipe(newer(path.build.img))
+      // .pipe(webp())
+      // .pipe(gulp.dest(path.build.img))
+      // .pipe(gulp.src(path.src.img))
+      // .pipe(newer(path.build.img))
       .pipe(
         imagemin({
           progressive: true,
