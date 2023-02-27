@@ -1,3 +1,3 @@
-Проект "SRM Clevera коворкинг" - это веб-сайт, который представляет собой лэндинг, посвященный коворкингу SRM Clevera. Сайт создан с целью привлечения клиентов и предоставления информации о преимуществах данного коворкинга.
+This project is a landing page dedicated to the SRM Clevera co-working space. The website is designed to attract clients and provide information about the advantages of this SRM.
 
-Верстка сайта выполнена кроссбраузерно, что обеспечивает корректное отображение сайта на различных устройствах и в различных браузерах. Также в проекте была проведена оптимизация, чтобы ускорить загрузку страницы и улучшить пользовательский опыт.
+The website design is cross-browser, ensuring proper display on various devices and browsers. Additionally, the project includes optimization to speed up page loading and improve the user experience.
